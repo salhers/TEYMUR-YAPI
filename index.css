@@ -130,3 +130,28 @@
     font-family: 'Arial Black', sans-serif;
     fill: black; /* Delik açılacak yer */
 }
+/* --- MOBİL AYARLAR (Ekran 768px ve altı için) --- */
+@media (max-width: 768px) {
+    
+    .hero-section {
+        height: 50vh; /* Mobilde ekranın yarısını kaplasın, çok uzun olmasın */
+    }
+
+    .mask-text {
+        font-size: 50px; /* Dev harfleri mobilde sığacak kadar küçülttük */
+        letter-spacing: -1px; /* Harf aralarını mobilde biraz açalım ki okunsun */
+    }
+
+    /* Eğer bir butonun varsa onu da mobilde uygun boyuta getirelim */
+    .btn-modern {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+}
+
+/* --- ÇOK KÜÇÜK TELEFONLAR İÇİN (Ekran 480px ve altı) --- */
+@media (max-width: 480px) {
+    .mask-text {
+        font-size: 35px; /* Dar telefonlarda yazı iyice küçülür ve taşmaz */
+    }
+}
