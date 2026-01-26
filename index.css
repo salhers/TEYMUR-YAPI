@@ -1,0 +1,75 @@
+/* --- MOBİL UYUMLULUK AYARLARI --- */
+
+@media (max-width: 768px) {
+    /* 1. Ana Bölüm Yüksekliği: Telefonda ekranın tamamı yerine yarısını kaplasın */
+    .hero-section {
+        height: 50vh !important; 
+    }
+
+    /* 2. Videolu Yazı: 130px mobilde çok büyüktür, sığacak boyuta çekiyoruz */
+    .mask-text {
+        font-size: 70px !important; /* Yazı hala büyük ama taşmayacak şekilde */
+        letter-spacing: -2px;
+    }
+
+    /* 3. İstatistik Sayıları: Yan yana dizilmek yerine alt alta gelebilirler */
+    .counter-box {
+        margin-bottom: 20px;
+    }
+    
+    .display-4 {
+        font-size: 2.5rem !important; /* Sayıların boyutunu biraz küçültüyoruz */
+    }
+
+    /* 4. Resimler: Mobilde resimlerin taşmaması için */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* --- ÇOK KÜÇÜK TELEFONLAR İÇİN (iPhone SE vb.) --- */
+@media (max-width: 480px) {
+    .mask-text {
+        font-size: 50px !important;
+    }
+}
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: black;
+}
+
+/* VIDEO ARKA PLAN */
+.hero video {
+  position: absolute;  
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* YAZI ÜSTTE */
+.hero-text {
+  position: absolute;   
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Montserrat, sans-serif;
+  font-size: clamp(48px, 10vw, 120px);
+  font-weight: 900;
+  color: white;
+  letter-spacing: -2px;
+  text-align: center;
+  z-index: 2;           
+}
+
+
