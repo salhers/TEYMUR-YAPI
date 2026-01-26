@@ -1,0 +1,54 @@
+/* --- MOBİL UYUMLULUK AYARLARI --- */
+
+@media (max-width: 768px) {
+    /* 1. Ana Bölüm Yüksekliği: Telefonda ekranın tamamı yerine yarısını kaplasın */
+    .hero-section {
+        height: 50vh !important; 
+    }
+
+    /* 2. Videolu Yazı: 130px mobilde çok büyüktür, sığacak boyuta çekiyoruz */
+    .mask-text {
+        font-size: 70px !important; /* Yazı hala büyük ama taşmayacak şekilde */
+        letter-spacing: -2px;
+    }
+
+    /* 3. İstatistik Sayıları: Yan yana dizilmek yerine alt alta gelebilirler */
+    .counter-box {
+        margin-bottom: 20px;
+    }
+    
+    .display-4 {
+        font-size: 2.5rem !important; /* Sayıların boyutunu biraz küçültüyoruz */
+    }
+
+    /* 4. Resimler: Mobilde resimlerin taşmaması için */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* --- ÇOK KÜÇÜK TELEFONLAR İÇİN (iPhone SE vb.) --- */
+@media (max-width: 480px) {
+    .mask-text {
+        font-size: 50px !important;
+    }
+}
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hero {
+  height: 100vh;
+  background: url("turkiye-nin-en-iyi-insaat-sirketleri-46-1024x684.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  padding: 40px;
+}
